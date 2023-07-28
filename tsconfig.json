@@ -9,16 +9,17 @@
       "esnext",
       "dom"
     ],
-    "rootDir": "src",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "moduleResolution": "node",
     "strict": true,
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "importsNotUsedAsValues": "error",
+    "verbatimModuleSyntax": true,
     "noUncheckedIndexedAccess": true
   },
   "include": [
-    "**/*"
+    "./src/**/*.ts"
   ]
 }
