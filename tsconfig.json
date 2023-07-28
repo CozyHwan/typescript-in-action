@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "strict": true,
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "importsNotUsedAsValues": "error",
+    "noUncheckedIndexedAccess": true
+  },
+  "include": [
+    "**/*"
+  ]
+}
