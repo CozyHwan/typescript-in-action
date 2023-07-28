@@ -1,19 +1,21 @@
 {
-  "name": "typescript-in-action",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "start": "npx ts-node",
-    "dev": "nodemon --exec ts-node src/app.ts",
-    "build": "parcel build index.html"
-  },
-  "devDependencies": {
-    "@types/node": "^20.4.5",
-    "nodemon": "^3.0.1",
-    "parcel-bundler": "^1.6.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.6"
-  },
-  "keywords": []
+    "name": "typescript-in-action",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx ts-node",
+        "dev": "nodemon --exec ts-node src/app.ts",
+        "build": "parcel build index.html",
+        "lint": "npx prettier . --write"
+    },
+    "devDependencies": {
+        "@types/node": "^20.4.5",
+        "nodemon": "^3.0.1",
+        "parcel-bundler": "^1.6.1",
+        "prettier": "3.0.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    },
+    "keywords": []
 }
