@@ -1,1 +1,0 @@
-{"id":"index.html","dependencies":[{"name":"./main.ts","dynamic":true,"resolved":"/project/sandbox/main.ts","parent":"/project/sandbox/index.html"}],"generated":{"html":"<!DOCTYPE html>\n\n<script type=\"module\" src=\"/6427dc610ec40c788cba04a9c39d6dcf.js\"></script>\n"},"sourceMaps":null,"error":null,"hash":"88fb44187806578d60f5e854d4d35c25","cacheData":{}}
