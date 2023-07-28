@@ -7,7 +7,8 @@
         "start": "npx ts-node",
         "dev": "nodemon --exec ts-node src/app.ts",
         "build": "parcel build index.html",
-        "lint": "npx prettier . --write"
+        "lint": "npx prettier --check ./src",
+        "lint:fix": "npx prettier --write ./src"
     },
     "devDependencies": {
         "@types/node": "^20.4.5",

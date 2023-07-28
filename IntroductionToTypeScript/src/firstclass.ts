@@ -10,11 +10,11 @@
  *
  */
 const sayHello = () => {
-    return "Hello, ";
-};
+  return 'Hello, '
+}
 
 const greeting = (helloMessage: any, name: string) => {
-    console.log(helloMessage() + name);
-};
+  console.log(helloMessage() + name)
+}
 
-greeting(sayHello, "JavaScript!");
+greeting(sayHello, 'JavaScript!')
