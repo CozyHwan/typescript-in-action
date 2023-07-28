@@ -1,5 +1,5 @@
 function repeatHello(count: number): string {
-  return 'hello'.repeat(count)
+  return 'hello'
 }
 
-console.log(repeatHello(3))
+export default repeatHello
