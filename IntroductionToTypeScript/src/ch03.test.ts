@@ -21,7 +21,7 @@ describe('obj 객체', () => {
  */
 // const name = input ? input : '이름 없음' // 조건 연산자를 사용 할 수 있다.
 const user = {
-//   name: name,
+  //   name: name,
   age: 20, // 프로퍼티명: 식
 }
 
@@ -40,13 +40,14 @@ describe('user 객체', () => {
  */
 const proName = 'proName'
 const str = {
-    "foo": 123,
-    "foo bar": -500,
-    "↑↓↑↓": "",
-    1: 'one',
-    2.05 : 'two point o five',
-    [proName]: 123
+  foo: 123,
+  'foo bar': -500,
+  '↑↓↑↓': '',
+  1: 'one',
+  2.05: 'two point o five',
+  [proName]: 123,
 }
+
 describe('str 객체', () => {
   test('프로퍼티 값이 올바르면 리턴을 한다.', () => {
     expect(str.foo).toBe(123)
@@ -56,3 +57,23 @@ describe('str 객체', () => {
     expect(str.proName).toBe(123)
   })
 })
+
+/**
+ * 프로퍼티 접근은 객체의 프로퍼티의 값을 가져오거나 프로퍼티 값을 대입하는 기능을 의미합니다.
+ * 구문은 식.프로퍼티명 형식으로 접근이 가능합니다.
+ * 동적 프로퍼티명은 식1[식2] 형태의 구문입니다.
+ *
+ *
+ */
+const user1 = {
+  name: 'uhyo',
+  age: 25,
+}
+
+console.log(user1.age) // 25
+
+user1.age = 26
+
+console.log(user1.age) // 26
+
+console.log(user1['name'])
