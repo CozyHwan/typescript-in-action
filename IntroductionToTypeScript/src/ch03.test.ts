@@ -77,3 +77,23 @@ user1.age = 26
 console.log(user1.age) // 26
 
 console.log(user1['name'])
+
+/**
+ * 타입스크립트는 객체가 암묵적으로 복사가 되지 않아 여러 변수에 같은 객체가 들어가는 경우가 있다.
+ * A객체에 다른 변수에 대입을 해도 프로퍼티 값은 동일하다.
+ * 참조 된 변수가 프로퍼티 값을 변경한다면 A객체의 프로퍼티 값에도 영향이 간다.
+ */
+const foo = { num: 1234 }
+console.log('foo: ' + foo.num) // foo = 1234
+
+const bar = foo // foo 객체 참조
+console.log('bar: ' + bar.num) // bar = 1234
+
+const sep = foo // foo 객체 참조
+console.log('sep: ' + sep.num) // sep = 1234
+
+sep.num = 0
+
+console.log(
+  'foo property change by sep property: ' + foo.num,
+) // foo = 0
