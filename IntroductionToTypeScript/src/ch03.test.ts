@@ -97,3 +97,9 @@ sep.num = 0
 console.log(
   'foo property change by sep property: ' + foo.num,
 ) // foo = 0
+
+const bar1 = {...foo}
+console.log('bar1: ' + bar.num) // 객체의 명시적 복사는 전개 구문으로 객체를 복사한다.
+
+bar1.num = 1
+console.log('foo property chaged by bar1 property: ' + foo.num)
