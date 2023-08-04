@@ -98,8 +98,48 @@ console.log(
   'foo property change by sep property: ' + foo.num,
 ) // foo = 0
 
-const bar1 = {...foo}
+const bar1 = { ...foo }
 console.log('bar1: ' + bar.num) // 객체의 명시적 복사는 전개 구문으로 객체를 복사한다.
 
 bar1.num = 1
-console.log('foo property chaged by bar1 property: ' + foo.num)
+console.log(
+  'foo property chaged by bar1 property: ' + foo.num,
+)
+
+/**
+ * 선택적 프로퍼티는 객체 내 프로퍼티가 있든 없든 상관 없는 것을 의미합니다.
+ * 프로퍼티명 뒤에 ?를 붙입니다.
+ * baz?: number | undefined는 유니온 타입니다.
+ */
+type MyObj1 = {
+  foo: boolean
+  bar: boolean
+  baz?: number // baz?: number | undefined
+}
+
+const obj1: MyObj1 = {
+  foo: true,
+  bar: false,
+}
+
+const obj2: MyObj1 = {
+  foo: false,
+  bar: true,
+  baz: 1234,
+}
+
+describe('MyObj1 객체', () => {
+  test('프로퍼티 값이 객체의 타입에 의도에 맞게 리턴한다.', () => {
+    expect(obj1.foo).toEqual(true)
+    expect(obj1.bar).toEqual(false)
+    expect(obj1.baz).toEqual(undefined)
+  })
+})
+
+describe('MyObj2 객체', () => {
+  test('프로퍼티 값이 객체의 타입에 의도에 맞게 리턴한다.', () => {
+    expect(obj2.foo).toEqual(false)
+    expect(obj2.bar).toEqual(true)
+    expect(obj2.baz).toEqual(1234)
+  })
+})
