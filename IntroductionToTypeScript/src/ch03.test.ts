@@ -97,3 +97,30 @@ sep.num = 0
 console.log(
   'foo property change by sep property: ' + foo.num,
 ) // foo = 0
+
+type User<T> = {
+  name: string
+  child: T
+}
+
+/**
+ * 타입 인수를 가진 타입 선언하기
+ * 타입 인수란? 타입명 뒤에 타입 인수를 <>로 감쌉니다.
+ * 타입 인수를 가진 타입을 제네릭 타입이라고 합니다.
+ */
+type Family<User, Child> = {
+  mother: User
+  father: User
+  child: Child
+}
+
+const u: User<number> = {
+  name: 'user',
+  child: 1234,
+}
+
+describe('u 객체', () => {
+  test('타입인수가 올바르게 지정이 되면 리턴한다', () => {
+    expect(u.child).toBe(1234)
+  })
+})
