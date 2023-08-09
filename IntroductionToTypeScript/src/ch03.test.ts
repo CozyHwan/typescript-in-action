@@ -207,3 +207,22 @@ describe('u 객체', () => {
   })
 })
 
+type giadin<T,K> = {
+  mother: T;
+  father: T;
+  child: K
+}
+
+const obj4: giadin<string, number> = {
+  mother: '엄마',
+  father: '아빠',
+  child: 1234
+}
+
+describe('obj4 객체', () => {
+  test('타입인수가 올바르게 지정이 되면 리턴한다', () => {
+    expect(obj4.mother).toEqual('엄마')
+    expect(obj4.father).toEqual('아빠')
+    expect(obj4.child).toEqual(1234)
+  })
+})
