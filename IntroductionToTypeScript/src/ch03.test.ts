@@ -157,27 +157,27 @@ describe('MyObj2 객체', () => {
 // })
 
 const member = {
-  id : '1234',
-  name: ['하나','둘', '셋']
+  id: '1234',
+  name: ['하나', '둘', '셋'],
 }
 
 console.log(member.name)
 
 type FooBar = {
-  foo: string,
-  bar: number,
+  foo: string
+  bar: number
 }
 
 type FooBarBaz = {
-  foo: string,
-  bar: number,
-  baz: boolean,
+  foo: string
+  bar: number
+  baz: boolean
 }
 
-const obj3 : FooBarBaz = {
+const obj3: FooBarBaz = {
   foo: 'string',
   bar: 1234,
-  baz: true
+  baz: true,
 }
 
 type User<T> = {
@@ -207,16 +207,16 @@ describe('u 객체', () => {
   })
 })
 
-type giadin<T,K> = {
-  mother: T;
-  father: T;
+type giadin<T, K> = {
+  mother: T
+  father: T
   child: K
 }
 
 const obj4: giadin<string, number> = {
   mother: '엄마',
   father: '아빠',
-  child: 1234
+  child: 1234,
 }
 
 describe('obj4 객체', () => {
@@ -226,3 +226,22 @@ describe('obj4 객체', () => {
     expect(obj4.child).toEqual(1234)
   })
 })
+
+const arr = [0, '문자열', -456 * 100]
+
+arr[1] = '재할당'
+
+arr = [1, 2, 345, 67] // 재할당 불가능
+
+console.log(typeof arr)
+
+const arr1 = [4, 5, 6]
+const arr2 = [1, 2, 3, ...arr1]
+
+console.log(arr2)
+
+console.log(arr['2'])
+
+arr2[2] = 8
+
+console.log(arr2)
